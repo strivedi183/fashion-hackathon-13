@@ -20,4 +20,12 @@ class Style < ActiveRecord::Base
   attr_accessible :user_id, :image, :title, :size, :brand, :color
   belongs_to :user
   has_attached_file :image, :styles => { :main => '500x500>', :thumb => '200x200>' }
+
+  def compare_height(input_height)
+    ((input_height - self.user.height) / input_height).abs
+  end
+
+  def compare_weight(input_weight)
+    ((input_weight - self.user.weight) / input_weight).abs
+  end
 end

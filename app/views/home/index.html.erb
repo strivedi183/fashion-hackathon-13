@@ -18,19 +18,16 @@
 
 	<div class="search-box">
 			<h1>Find your FashionMate and Start Shopping</h1>
-			<form id="search-fields" data-role="none">
-				<div class="input-elements">
-					<label>Weight: </label><input class="search-main-input" id="weight" placeholder="Weight">
-					<label>Height: </label><input class="search-main-input" id="height" placeholder="Height">
-				</div>
-				<input id="search" type="submit" value="Search">
-			</form>
-		</div>
-	<div class="content-wrapper">
-		<div class="styles-wrapper-main">
-			<ul class="styles-grid-main">
-				<%= render partial: "styles/styles" %>
-			</ul>
-		</div>
+      <%= form_tag '/search_fields', :remote => true, :id => 'search-fields' do %>
+        <label>Weight: </label>
+        <%= text_field_tag :weight, nil, :class => 'search-main-input', :id => 'weight', :placeholder => 'Weight' %>
+        <label>Height: </label>
+        <%= text_field_tag :height, nil, :class => 'search-main-input', :id => 'height', :placeholder => 'Height' %>
+        <%= submit_tag nil, :id => 'search', :value => 'Search' %>
+      <% end %>
+	</div>
+
+	<div class="styles-wrapper-main">
+		<%= render partial: "styles/styles" %>
 	</div>
 </div>
