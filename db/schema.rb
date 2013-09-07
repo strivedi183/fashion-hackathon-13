@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130907160355) do
+ActiveRecord::Schema.define(:version => 20130907182309) do
+
+  create_table "styles", :force => true do |t|
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.integer  "user_id"
+    t.string   "title"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "size"
+    t.string   "brand"
+    t.string   "color"
+  end
 
   create_table "users", :force => true do |t|
     t.datetime "created_at",                             :null => false
@@ -26,6 +40,8 @@ ActiveRecord::Schema.define(:version => 20130907160355) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.integer  "height"
+    t.integer  "weight"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
