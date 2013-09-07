@@ -4,6 +4,7 @@ gem 'rails', '3.2.14'
 gem 'pg'
 gem 'jquery-rails'
 gem 'devise'
+gem 'sqlite3'
 
 gem 'paperclip'
 
