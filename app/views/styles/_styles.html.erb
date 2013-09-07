@@ -1,0 +1,17 @@
+<% @styles.each do |style| %>
+  <li class="style-image-wrapper" data-user="">
+
+    <h1><%= style.title %></h1>
+    <div class="image-wrapper">
+      <div class="main-image">
+        <%= image_tag style.image.url(:main) %>
+      </div>
+    </div>
+    <div class="style-metadata">
+      <h1><%= style.user.email %></h1>
+      <h1><%= style.size %></h1>
+      <h1><%= style.brand %></h1>
+      <h1><%= style.color %></h1>
+    </div>
+  </li>
+<% end %>
