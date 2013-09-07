@@ -1,4 +1,13 @@
 <div class="main-homepage-wrapper">
+	<div class="opacity" style="display:none;"></div>
+	<div class="login-view" style="display:none;">
+		<div class="login-wrapper">
+			<%= render partial: "users/sessions/new" %>
+		</div>
+		<div class="registration-wrapper">
+			<%= render partial: "users/registrations/new" %>
+		</div>
+	</div>
 	<div class="header">
 		<div class="logo">
 			<%= image_tag 'logo.png' %>
@@ -17,9 +26,11 @@
 				<input id="search" type="submit" value="Search">
 			</form>
 		</div>
-
-	<div class="styles-wraper-main">
-
-		<%= render partial: "styles/styles" %>
+	<div class="content-wrapper">
+		<div class="styles-wrapper-main">
+			<ul class="styles-grid-main">
+				<%= render partial: "styles/styles" %>
+			</ul>
+		</div>
 	</div>
 </div>

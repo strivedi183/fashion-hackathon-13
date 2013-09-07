@@ -3,9 +3,45 @@ body{
 	background-image:url('sos.png');
 	margin: 0;
 	padding: 0;
+	width: 100%;
+
 	.main-homepage-wrapper{
-		width: 100%;
-		height: 100%;
+
+		.opacity{
+			width: 100%;
+			height: 100%;
+			background-color: gray;
+			opacity: 0.4;
+			position: absolute;
+			z-index: 1000;
+		}
+		
+		.login-view{
+			width: 100%;
+			height: 300px;
+			background-color: white;
+			position: absolute;
+			z-index: 2000;
+		
+			-webkit-transition:all 0.4s ease-in-out;
+			-moz-transition:all 0.4s ease-in-out;
+			-o-transition:all 0.4s ease-in-out;
+			transition:all 0.4s ease-in-out;
+
+			.login-wrapper{
+				float: left;
+				padding-left: 50px;
+				width: 200px;
+				height: 300px;
+				margin-right: auto;
+				margin-left: auto;
+			}
+
+			.registration-wrapper{
+				display: none;
+				@extend .login-wrapper;
+			}
+		}
 		
 
 		.header{
@@ -16,7 +52,7 @@ body{
 			margin-bottom:20px;
 
 			.logo{
-				width: 150px;
+				width: 180px;
 				position: absolute;
 				top: -25px;
 				left: 0;
@@ -40,9 +76,10 @@ body{
 		}	
 
 		.search-box{
+			position: relative;
 			width: 100%;
 			height: 250px;
-			background-color: gray;
+			background-color: #d0b8f9;
 			padding: 10px;
 			text-align: center;
 			margin-right: auto;
@@ -63,7 +100,7 @@ body{
 				@extend .button;
 
 				font-family: 'Roboto';
-				background-color: white;
+				background-color: gray;
 				width: 200px;
 				-webkit-appearance: none;
 				border: none;
@@ -71,20 +108,38 @@ body{
 				margin-left: auto;
 				margin-right: auto;
 				font-size: 150%;
-				color: #a576f4;
-
+				color: white;
 			}
 		}
 
+		.content-wrapper{
+			position: absolute;
+			background-color: #f4effc;
+			width: 100%;
+			height: 100%;
+		}
 		.styles-wrapper-main{
 			width: 80%;
 			margin-left: auto;
 			margin-right: auto;
+			margin-bottom: 30px;
+
+			ul{
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
 		}
 
 	.style-image-wrapper{
 			width: 300px;
 			height: 300px;
+
+			h1{
+				font-size: 90%;
+				color: black;
+				font-style: bold;
+			}
 
 			.image-wrapper{
 				width: 200px;
@@ -93,6 +148,18 @@ body{
 
 				img{
 					width: 200px;
+				}
+			}
+
+			.style-metadata{
+				font-size: 80%;
+				p{
+					font-style: bold;
+					color: black;
+				}
+
+				span{
+					color: #a576f4;
 				}
 			}
 		}
