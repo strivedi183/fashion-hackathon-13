@@ -1,1 +1,25 @@
-<h1>This is a home page</h1>
+<div class="main-homepage-wrapper">
+	<div class="header">
+		<div class="logo">
+			<%= image_tag 'logo.png' %>
+		</div>
+
+		<div class="button" id="login">Login</div>
+	</div>
+
+	<div class="search-box">
+			<h1>Find your FashionMate and Start Shopping</h1>
+			<form id="search-fields" data-role="none">
+				<div class="input-elements">
+					<label>Weight: </label><input class="search-main-input" id="weight" placeholder="Weight">
+					<label>Height: </label><input class="search-main-input" id="height" placeholder="Height">
+				</div>
+				<input id="search" type="submit" value="Search">
+			</form>
+		</div>
+
+	<div class="styles-wraper-main">
+
+		<%= render partial: "shared/image.html.erb" %>
+	</div>
+</div>
