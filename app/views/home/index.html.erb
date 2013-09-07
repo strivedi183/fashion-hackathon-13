@@ -17,17 +17,23 @@
 	</div>
 
 	<div class="search-box">
+		<div class="search-wrapper">
 			<h1>Find your FashionMate and Start Shopping</h1>
-      <%= form_tag '/search_fields', :remote => true, :id => 'search-fields' do %>
-        <label>Weight: </label>
-        <%= text_field_tag :weight, nil, :class => 'search-main-input', :id => 'weight', :placeholder => 'Weight' %>
-        <label>Height: </label>
-        <%= text_field_tag :height, nil, :class => 'search-main-input', :id => 'height', :placeholder => 'Height' %>
-        <%= submit_tag nil, :id => 'search', :value => 'Search' %>
-      <% end %>
+	      <%= form_tag '/search_fields', :remote => true, :id => 'search-fields' do %>
+	        <label>Weight: </label>
+	        <%= text_field_tag :weight, nil, :class => 'search-main-input', :id => 'weight', :placeholder => 'Weight' %>
+	        <label>Height: </label>
+	        <%= text_field_tag :height, nil, :class => 'search-main-input', :id => 'height', :placeholder => 'Height' %>
+	        <%= submit_tag nil, :id => 'search', :value => 'Search' %>
+	      <% end %>
+		</div>
 	</div>
 
-	<div class="styles-wrapper-main">
-		<%= render partial: "styles/styles" %>
+	<div class="content-wrapper">
+		<div class="styles-wrapper-main">
+			<ul class="list-wrapper">
+				<%= render partial: "styles/styles" %>
+			</ul>
+		</div>
 	</div>
 </div>

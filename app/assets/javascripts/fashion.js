@@ -10,6 +10,11 @@ $(document).ready(function(){
 		$('.login-view').hide();
 	});
 
+	$(document).delegate('#search', 'click', function(){
+
+		$('.search-box').hide();
+	})
+
 });
 
 function textTimer(){

@@ -8,6 +8,15 @@
     </div>
     <div class="style-metadata">
       <p>User: <span><%= style.user.email %> </span></p>
+
+      <% if (@weight) %>
+      <p class="comp">WeightIndex: <%= style.compute_weight(@weight) %></p>
+      <% end %>
+
+      <% if (@height) %>
+      <p class="comp">HeightIndex: <%= style.compute_height(@height) %></p>
+      <% end %>
+
       <p>Size Worn: <span><%= style.size %></span></p>
       <p>Brand: <span><%= style.brand %></span></p>
     </div>
