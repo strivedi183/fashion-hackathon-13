@@ -18,16 +18,23 @@
 
 	<div class="search-box">
 		<div class="search-wrapper">
-			<h1>Find your FashionMate and Start Shopping</h1>
-	      <%= form_tag '/search_fields', :remote => true, :id => 'search-fields' do %>
-	        <label>Weight: </label>
-	        <%= text_field_tag :weight, nil, :class => 'search-main-input', :id => 'weight', :placeholder => 'Weight' %>
-	        <label>Height: </label>
-	        <%= text_field_tag :height, nil, :class => 'search-main-input', :id => 'height', :placeholder => 'Height' %>
-	        <%= submit_tag nil, :id => 'search', :value => 'Search' %>
-	      <% end %>
+			<h1 id="search-text">Find your FashionMate and Start Shopping</h1>
+			<div class="search-form">
+		      <%= form_tag '/search_fields', :remote => true, :id => 'search-fields' do %>
+		        <label>Weight: </label>
+		        <%= text_field_tag :weight, nil, :class => 'search-main-input', :id => 'weight', :placeholder => 'Weight' %>
+		        <label>Height: </label>
+		        <%= text_field_tag :height, nil, :class => 'search-main-input', :id => 'height', :placeholder => 'Height' %>
+		        <%= submit_tag nil, :id => 'search', :value => 'Search' %>
+		      <% end %>
+		    </div>
+		</div>
+		<div class="search-info" style="display:none">
+			<h1>These are your FashionMates!</h1>
+			<h1 style="color: #300a70; font-size: 150%; margin-top: 60px;">Checkout the compatability index that tells you how similary your height and weight are to your FashionMate's</h1>
 		</div>
 	</div>
+
 
 	<div class="content-wrapper">
 		<div class="styles-wrapper-main">
