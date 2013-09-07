@@ -29,5 +29,4 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :height, :weight
 
   has_many :styles
-
 end
