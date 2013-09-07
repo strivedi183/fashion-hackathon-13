@@ -5,7 +5,6 @@ gem 'pg'
 gem 'jquery-rails'
 gem 'devise'
 gem 'sqlite3'
-
 gem 'paperclip'
 
 group :assets do
