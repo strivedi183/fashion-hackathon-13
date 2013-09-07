@@ -4,7 +4,7 @@ gem 'rails', '3.2.14'
 gem 'pg'
 gem 'jquery-rails'
 gem 'devise'
-gem 'sqlite3'
+#gem 'sqlite3'
 gem 'paperclip'
 
 group :assets do
@@ -31,4 +31,8 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'meta_request'
   gem 'selenium-webdriver'
+end
+
+group :development do
+  gem 'sqlite3'
 end
