@@ -14,7 +14,7 @@
 #
 
 class Style < ActiveRecord::Base
-  attr_accessible :user_id, :image
+  attr_accessible :user_id, :image, :title
   belongs_to :user
   has_attached_file :image, :styles => { :main => '500x500>', :thumb => '200x200>' }
 end
